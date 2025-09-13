@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.store.OwnerBooksScreenController">
+    <VBox spacing="20" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <!-- Top Part - Table -->
+        <TableView fx:id="booksTable" prefHeight="300">
+            <columns>
+                <TableColumn text="Book Name" prefWidth="400">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Book Price" prefWidth="400">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <!-- Middle Part - Add Form -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Name:" />
+            <TextField fx:id="nameField" prefWidth="200" />
+            <Label text="Price:" />
+            <TextField fx:id="priceField" prefWidth="100" />
+            <Button text="Add" onAction="#handleAddBook" style="-fx-pref-width: 80;" />
+        </HBox>
+
+        <!-- Bottom Part - Action Buttons -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Delete" onAction="#handleDeleteBook" style="-fx-pref-width: 100;" />
+            <Button text="Back" onAction="#handleBack" style="-fx-pref-width: 100;" />
+        </HBox>
+    </VBox>
+</AnchorPane>

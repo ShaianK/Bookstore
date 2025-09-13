@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="book.store.CustomerCostController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <!-- Total Cost -->
+    <Label fx:id="totalCostLabel" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+    <!-- Points and Status -->
+    <Label fx:id="pointsStatusLabel" style="-fx-font-size: 18;"/>
+    
+    <!-- Logout Button -->
+    <Button text="Logout" onAction="#handleLogout" 
+            style="-fx-pref-width: 150; -fx-font-weight: bold;"/>
+</VBox>
